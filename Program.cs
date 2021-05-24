@@ -12,7 +12,6 @@ namespace UniqueArray
 
             IEnumerable<int> uniqueItems = Numbers.Distinct<int>();
             Console.WriteLine("Unique array elements using LINQ: " + string.Join(",", uniqueItems));
-
             Console.ReadLine();
         }
     }
