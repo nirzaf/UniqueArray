@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace UniqueArray
 {
@@ -8,25 +10,10 @@ namespace UniqueArray
         {
             int[] Numbers = { 4, 5, 3, 1, 6, 4, 2, 4, 5, 1, 2, 4, 5, 7, 8, 3 };
 
-            int[] Numbers2 = new int[10];
+            IEnumerable<int> uniqueItems = Numbers.Distinct<int>();
+            Console.WriteLine("Unique array elements using LINQ: " + string.Join(",", uniqueItems));
 
-            Console.WriteLine("Numbers Array ");
-            foreach (int num in Numbers)
-            {
-                Console.WriteLine(num.ToString());
-            }
-
-            foreach (int num in Numbers)
-            {
-
-                foreach (int num2 in Numbers2)
-                {
-                    if (num == num2)
-                    { 
-                       
-                    }
-                }           
-            }
+            Console.ReadLine();
         }
     }
 }
